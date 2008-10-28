@@ -10,8 +10,8 @@ module Scroogle
       attr_reader :response, :results
       
       def search(kw, results=100)
-        @response = open(BASE_URI % [CGI.escape(kw), results]).read.gsub(/<b>/,'').gsub(/<\/b>/,'')
-        self.parse
+        @response = open(BASE_URI % [CGI.escape(kw), results]).read.gsub(/<\/?b>/,'')
+        parse
       end
   
       def parse
