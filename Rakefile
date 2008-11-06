@@ -2,7 +2,7 @@ require "rake/gempackagetask"
 
 spec = Gem::Specification.new do |s|
   s.name          = "scrooby"
-  s.version       = '0.0.1'
+  s.version       = '0.0.2'
   s.require_path  = "lib"
   s.platform      = Gem::Platform::RUBY
   s.files         = ["lib/scroogle.rb"]

@@ -14,8 +14,8 @@ module Scroogle
         parse
       end
   
-      def parse
-        @results = @response.scan(RESULT).map {|res| Result.new(res)}
+      def parse(data=@response)
+        @results = data.scan(RESULT).map {|res| Result.new(res)}
       end
     end
   end
